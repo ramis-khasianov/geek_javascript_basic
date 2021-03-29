@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Домашка 2 Задание 2</title>
+</head>
+<body>
+    <script>
+
+        // Задание 6. Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation),
+        // где arg1, arg2 – значения аргументов, operation – строка с названием операции.
+        // В зависимости от переданного значения операции выполнить одну из арифметических
+        // операций (использовать функции из пункта 5) и вернуть полученное значение (использовать switch).
+
+        let custom_sum = (a, b) => {
+            return a + b;
+        }
+
+        let custom_dif = (a, b) => {
+            return a - b;
+        }
+
+        let custom_multi = (a, b) => {
+            return a * b;
+        }
+        let custom_div = (a, b) => {
+            if (b !== 0) {
+                return a / b;
+            } else {
+                return "В JS конечно можно делить на ноль, но все равно не стоит"
+            }
+        }
+
+        let mathOperation = (arg1, arg2, operation) => {
+            switch (operation) {
+                case "+":
+                    alert(custom_sum(arg1, arg2));
+                    break;
+                case "-":
+                    alert(custom_dif(arg1, arg2));
+                    break;
+                case "*":
+                    alert(custom_multi(arg1, arg2));
+                    break;
+                case "/":
+                    alert(custom_div(arg1, arg2));
+                    break;
+                case ":":
+                    alert(custom_div(arg1, arg2));
+                    break;
+            }
+        }
+
+        let first_arg = +prompt("Введите первое число")
+        let second_arg = +prompt("Введите второе число")
+        let selected_operation = prompt("Введите символ операции (+ - * /)")
+        mathOperation(first_arg, second_arg, selected_operation)
+
+    </script>
+</body>
+</html>
