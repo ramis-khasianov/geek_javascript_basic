@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 3 Домашка 2</title>
+</head>
+<body>
+    <script>
+
+        // Задание 3.
+        // Объявить две целочисленные переменные a и b и задать им произвольные начальные значения. Затем написать скрипт, который работает по следующему принципу:
+        // если a и b положительные, вывести их разность;
+        // если а и b отрицательные, вывести их произведение;
+        // если а и b разных знаков, вывести их сумму; ноль можно считать положительным числом.
+        let two_numbers_magic = (a, b) => {
+            if (a >= 0 && b >= 0)
+                return a - b
+            else if (a < 0 && b < 0)
+                return a * b
+            else
+                return a + b
+        }
+
+        alert(two_numbers_magic(3, 4))
+        alert(two_numbers_magic(-3, -4))
+        alert(two_numbers_magic(3, -4))
+
+
+    </script>
+</body>
+</html>
