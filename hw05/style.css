@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* general containers */
+.page-container {
+    height: 100vh;
+    background: linear-gradient(0deg, #EBF3FB 8.84%, rgba(152, 195, 232, 0) 31.12%);
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+/* general containers */
+
+/* Navbar */
+.navbar {
+    height: 120px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-items {
+    display: flex;
+    justify-content: left;
+    list-style-type:none;
+}
+
+.navbar-item {
+    margin-right: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-item a {
+    padding-bottom: 2px;
+    padding-top: 2px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #555273;
+    letter-spacing: 0.05em;
+}
+
+.navbar-item a:hover {
+    padding: 0;
+    color: #555273;
+    border-bottom: #555273 1px solid;
+}
+/* navbar */
+
+/* Chess board */
+.chess-container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.chess-row {
+    display: flex;
+    align-items: center;
+}
+
+.chess-cell {
+    display: flex;
+    justify-content: center;
+    color: #DDD;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 700;
+    height: 50px;
+    width: 50px;
+    -webkit-text-stroke: 1px #222;
+}
+
+.chess-cell:hover {
+    background-color: #777;
+}
+
+.chess-column-labels-row {
+    margin: 0 50px;
+    display: flex;
+    align-items: center;
+}
+
+.chess-info-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+}
+
+.black-cell {
+    background-color: #5A98D0;
+}
+
+.black-figure {
+    color: #1F3F68;
+}
+/* Chess board */
+
+/* Корзина */
+.cart-item-row {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 140px;
+    margin: 15px 0;
+    padding: 0 15px;
+    box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+}
+
+.cart-item-image {
+    height: 100px;
+    width: 160px;
+}
+
+.cart-item-title {
+    flex-grow: 1;
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+.cart-item-price {
+    width: 80px;
+    margin: 10px;
+}
+
+.cart-item-remove-image {
+    height: 25px;
+    width: 20px;
+    margin: 0 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("img/trash.svg");
+}
+
+.cart-item-remove-image:hover {
+    background-image: url("img/trash-2.svg");
+}
+
+.cart-summary-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+    height: 70px;
+    margin: 20px 0;
+    padding: 0 15px;
+    box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+}
+/* Корзина */
+
