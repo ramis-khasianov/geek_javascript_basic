@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 2 Домашка 4</title>
+</head>
+<body>
+<script>
+
+    // Задание 2. Продолжить работу с интернет-магазином:
+    // 2.1. В прошлом домашнем задании вы реализовали корзину на базе массивов. Какими объектами можно заменить их элементы?
+    // 2.2. Реализуйте такие объекты.
+    // 2.3. Перенести функционал подсчета корзины на объектно-ориентированную базу.
+
+    let basket = {
+        items: [
+            {
+                id: 1,
+                title: "Что такое сервисный дизайн", // Типа магазин видеокурсов
+                type: "Course",
+                price: 1300
+            },
+            {
+                id: 2,
+                title: "Проектирование мобильного приложения",
+                type: "Program",
+                price: 10000
+            },
+            {
+                id: 3,
+                title: "Управление изменениями",
+                type: "Course",
+                price: 1800
+            }
+        ],
+
+        countTotalPrice() {
+            return this.items.reduce((totalPrice, basketItem) => totalPrice + basketItem.price, 0);
+        },
+
+        // Наверно еще полезно удалять товары из корзины :)
+        // Я пока вижу что онлайн курсы можно покупать только в количестве одной штуки, поэтому без поля quantity
+        // А так сделал бы через уменьшение атрибута quantity
+        removeItem(id) {
+            this.items.splice(this.items.findIndex(item => item.id === id), 1)
+        }
+    }
+
+    console.log(basket.countTotalPrice());
+    basket.removeItem(2);
+    console.log(basket.countTotalPrice());
+
+
+</script>
+</body>
+</html>
